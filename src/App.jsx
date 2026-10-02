@@ -439,9 +439,6 @@ function OfferScreen({
               role="status"
               className="border-t border-neutral-200 bg-neutral-50 px-4 py-3"
             >
-              <p className="text-body font-semibold text-neutral-900">
-                Rs 15,000 is above your current limit
-              </p>
               <p className="mt-1 text-body text-neutral-700">
                 Your current limit is Rs 10,000. You can choose Rs 5,000 or Rs
                 10,000 to continue.
