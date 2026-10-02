@@ -36,13 +36,25 @@ export default function ListRow({
         ) : null}
       </div>
       {trailing ? <div className="shrink-0">{trailing}</div> : null}
+      {isSelectable ? (
+        <span
+          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
+            selected ? "border-brand" : "border-neutral-300"
+          }`}
+          aria-hidden="true"
+        >
+          {selected ? (
+            <span className="h-2.5 w-2.5 rounded-full bg-brand" />
+          ) : null}
+        </span>
+      ) : null}
     </>
   );
 
   if (isInteractive) {
     const stateClasses = isSelectable && selected
-      ? "border-brand bg-brand-50 ring-1 ring-brand"
-      : "border-neutral-300 bg-white";
+      ? "border-brand-200 bg-brand-50"
+      : "border-neutral-200 bg-white";
 
     return (
       <button
@@ -52,7 +64,7 @@ export default function ListRow({
         aria-expanded={interaction === "informational" ? expanded : undefined}
         aria-controls={interaction === "informational" ? controls : undefined}
         onClick={onClick}
-        className={`w-full flex items-center gap-3 rounded-md border px-3 py-3 text-left transition-colors ${stateClasses} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${className}`}
+        className={`w-full min-h-16 flex items-center gap-3 rounded-lg border px-4 py-4 text-left transition-[background-color,border-color,box-shadow] ${stateClasses} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${className}`}
       >
         {content}
       </button>

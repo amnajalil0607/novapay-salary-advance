@@ -33,6 +33,10 @@ export default {
           700: "#4D4D4D",
           900: "#1A1A1A",
         },
+        transaction: {
+          credit: "#347552",
+          debit: "#A04C4C",
+        },
         success: "#1E9E5A",
       },
       borderRadius: {
@@ -42,6 +46,7 @@ export default {
       },
       boxShadow: {
         card: "0 1px 3px rgba(0, 0, 0, 0.08)",
+        action: "0 -10px 28px rgba(26, 26, 26, 0.07)",
       },
       fontSize: {
         display: ["28px", { lineHeight: "34px", fontWeight: "700" }],
