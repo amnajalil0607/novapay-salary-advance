@@ -309,6 +309,9 @@ function HomeScreen({ activeAdvance, onAdvanceAction }) {
                       <br />
                       Rs {activeAdvance.totalRepayment.toLocaleString("en-PK")} on{" "}
                       {activeAdvance.repaymentDate}
+                      <span className="block text-caption text-neutral-500">
+                        Your next payday
+                      </span>
                       <span className="mt-2 block text-caption text-neutral-500">
                         New offers will be available after this advance is repaid.
                       </span>
@@ -511,6 +514,9 @@ function ReviewScreen({
           <p className="text-body text-neutral-700">Repayment date</p>
           <p className="text-body font-semibold text-neutral-900 text-right">
             {REPAYMENT_DATE}
+            <span className="block text-caption font-normal text-neutral-500">
+              Next payday
+            </span>
           </p>
         </div>
 
@@ -571,6 +577,9 @@ function ConfirmationScreen({ amount, totalRepayment, onDone }) {
             <p className="text-caption text-neutral-500">Repayment date</p>
             <p className="mt-1 text-body font-semibold text-neutral-900">
               {REPAYMENT_DATE}
+              <span className="block text-caption font-normal text-neutral-500">
+                Next payday
+              </span>
             </p>
           </div>
         </div>
