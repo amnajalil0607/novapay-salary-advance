@@ -520,13 +520,11 @@ function ReviewScreen({
           </p>
         </div>
 
-        <div className="mt-5 border-t border-neutral-200 pt-5">
+        <div className="mt-5 flex items-center justify-between gap-4 border-t border-neutral-200 pt-5">
           <p className="text-caption font-semibold text-neutral-500">
             TOTAL REPAYMENT
           </p>
-          <div className="mt-1">
-            <AmountText amount={totalRepayment} size="display" />
-          </div>
+          <AmountText amount={totalRepayment} size="title" />
         </div>
       </Card>
     </ScreenLayout>
